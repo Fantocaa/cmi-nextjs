@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 11.8%; /* #1e1e1e */
+    --foreground: 0 0% 100%; /* #fff */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --color-bg1: rgb(108, 0, 162);
+    --color-bg2: rgb(0, 17, 82);
+    --color1: 18, 113, 255;
+    --color2: 221, 74, 255;
+    --color3: 100, 220, 255;
+    --color4: 200, 50, 50;
+    --color5: 180, 180, 50;
+    --color-interactive: 140, 100, 255;
+    --circle-size: 80%;
+    --blending: hard-light;
+  }
+
+  .dark {
+    --background: 0 0% 11.8%; /* #1e1e1e */
+    --foreground: 0 0% 100%; /* #fff */
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.Welcome-box {
+  isolation: isolate;
+  overflow: hidden;
+  align-items: center;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 32px;
+  box-shadow: inset 0 -7px 11px #bf212f;
+  display: flex;
+
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
+}
+
+.button-primary {
+  background: linear-gradient(
+      180deg,
+      rgba(191, 33, 47, 0) 0%,
+      rgba(191, 33, 47, 0.32) 100%
+    ),
+    rgba(191, 33, 47, 0.12);
+  box-shadow: inset 0 0 12px rgba(191, 33, 47, 0.24);
+}
+.button-primary:hover {
+  background: linear-gradient(
+      180deg,
+      rgba(191, 33, 47, 0) 0%,
+      rgba(191, 33, 47, 0.42) 100%
+    ),
+    rgba(191, 33, 47, 0.24);
+  box-shadow: inset 0 0 12px rgba(191, 33, 47, 0.44);
+}
+
+.button-services {
+  background: linear-gradient(
+      180deg,
+      rgba(191, 33, 47, 0) 0%,
+      rgba(191, 33, 47, 0.32) 100%
+    ),
+    rgba(191, 33, 47, 0.12);
+  box-shadow: inset 0 0 12px rgba(191, 33, 47, 0.24);
+}
+.button-services:hover {
+  background: linear-gradient(
+      180deg,
+      rgb(86, 31, 36) 0%,
+      rgba(191, 33, 47, 0.42) 100%
+    ),
+    rgba(191, 33, 47, 0.24);
+  box-shadow: inset 0 0 12px rgba(191, 33, 47, 0.44);
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mengubah lebar scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Mengubah background track scrollbar */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Mengubah warna dan hover scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+@keyframes glowing {
+  0%,
+  100% {
+    box-shadow: 0 0 8px #f9a73e, 0 0 25px #f9a73e, 0 0 50px #f9a73e,
+      0 0 200px #f9a73e, 0 0 2px #bf212f, 0 0 25px #bf212f, 0 0 50px #bf212f,
+      0 0 200px #bf212f;
+  }
+
+  25%,
+  75% {
+    box-shadow: 0 0 32px rgba(249, 167, 62, 0.75),
+      0 0 30px rgba(249, 167, 62, 0.75), 0 0 60px rgba(249, 167, 62, 0.75),
+      0 0 300px rgba(249, 167, 62, 0.75), 0 0 10px rgba(191, 33, 47, 0.75),
+      0 0 30px rgba(191, 33, 47, 0.75), 0 0 60px rgba(191, 33, 47, 0.75),
+      0 0 300px rgba(191, 33, 47, 0.75);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(249, 167, 62, 0.5),
+      0 0 30px rgba(249, 167, 62, 0.5), 0 0 60px rgba(249, 167, 62, 0.5),
+      0 0 300px rgba(249, 167, 62, 0.5), 0 0 10px rgba(191, 33, 47, 0.5),
+      0 0 30px rgba(191, 33, 47, 0.5), 0 0 60px rgba(191, 33, 47, 0.5),
+      0 0 300px rgba(191, 33, 47, 0.5);
+  }
+}
+
+.glowing-border {
+  animation: glowing 4s ease-in-out infinite;
+}
+
+/* Navbar dengan latar belakang transparan */
+.bg-transparent {
+  background-color: transparent;
+  transition: background-color 0.3s ease-in;
+}
+
+/* Navbar dengan latar belakang berwarna */
+.scrolled-bg {
+  background-color: #ffffff; /* Ganti dengan warna yang Anda inginkan */
+  transition: background-color 0.3s ease-in;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Atur shadow sesuai keinginan */
+}

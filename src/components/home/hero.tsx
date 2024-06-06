@@ -83,7 +83,7 @@ export default function Hero() {
           </motion.div>
         </AuroraBackground> */}
         <div className="h-screen w-full flex justify-center items-center z-50 bg-darkcmi bg-opacity-80 pt-16 2xl:pt-0">
-          <div className="h-full w-full flex flex-col gap-5 justify-center m-auto items-center text-center">
+          <div className="h-full w-full flex flex-col gap-5 justify-center m-auto items-center text-center px-4 sm:px-0">
             <div
               //   variants={slideInFromTop}
               className="Welcome-box py-[8px] px-[7px] border border-[#BF212F] opacity-[0.9] flex justify-center items-center text-center "
@@ -96,7 +96,7 @@ export default function Hero() {
 
             <div
               //   variants={slideInFromLeft(0.5)}
-              className="flex flex-col gap-6 mt-6 text-7xl 2xl:text-8xl font-bold text-white w-auto h-auto max-w-[900px] leading-[1.05] opacity-100"
+              className="flex flex-col gap-6 mt-6 text-4xl md:text-7xl 2xl:text-8xl font-bold text-white w-auto h-auto max-w-[900px] leading-[1.05] opacity-100"
             >
               <span>
                 Providing
@@ -118,7 +118,8 @@ export default function Hero() {
               Ruangan.
             </p>
             <Link
-              href="/login"
+              href="https://api.whatsapp.com/send?phone=628170500601"
+              target="__blank"
               //   variants={slideInFromLeft(1)}j
               // className="bg-darkcmi py-2 px-8 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
             >

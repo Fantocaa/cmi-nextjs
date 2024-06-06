@@ -88,7 +88,7 @@ export function MainNav() {
         </Link>
         <NavigationMenu>
           <NavigationMenuList>
-            <NavigationMenuItem>
+            <NavigationMenuItem className="hidden md:block">
               <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -98,7 +98,6 @@ export function MainNav() {
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                         href="/"
                       >
-                        {/* <Icons.logo className="h-6 w-6" /> */}
                         <div className="mb-2 mt-4 text-lg font-medium leading-6">
                           PT. CAHAYA MERCUSUAR INDONESIA
                         </div>
@@ -109,18 +108,22 @@ export function MainNav() {
                       </a>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/products/led-display" title="LED Display">
+                  <ListItem
+                    href="https://drive.tako.co.id/d/s/yl5SVM0c1iGcO1gI4oMvZo23KDkLtzaO/oE7q9J05mcFHvyzZacRMy9mSwtXB_SBM-Urfg5aCYags"
+                    target="__blank"
+                    title="LED Display"
+                  >
                     Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
                     Semua Jenis Event Anda.
                   </ListItem>
-                  <ListItem href="/products/parled" title="PAR LED">
+                  {/* <ListItem href="/products/parled" title="PAR LED">
                     Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
                     Semua Jenis Event Anda.
                   </ListItem>
                   <ListItem href="/products/fresnel" title="Fresnel">
                     Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
                     Semua Jenis Event Anda.
-                  </ListItem>
+                  </ListItem> */}
                   {/* <ListItem href="/products/moving-head" title="Moving Head">
                     Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
                     Semua Jenis Event Anda.
@@ -154,27 +157,27 @@ export function MainNav() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            <NavigationMenuItem>
+            {/* <NavigationMenuItem>
               <Link href="/products" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Product
                 </NavigationMenuLink>
               </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
+            </NavigationMenuItem> */}
+            {/* <NavigationMenuItem>
               <Link href="/about" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   About
                 </NavigationMenuLink>
               </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
+            </NavigationMenuItem> */}
+            {/* <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Contact
                 </NavigationMenuLink>
               </Link>
-            </NavigationMenuItem>
+            </NavigationMenuItem> */}
           </NavigationMenuList>
         </NavigationMenu>
         {/* <Link
@@ -194,8 +197,8 @@ export function MainNav() {
       </Link> */}
 
         <Link
-          href="https://wa.me/+6281252664674"
-          target="_blank"
+          href="https://api.whatsapp.com/send?phone=628170500601"
+          target="__blank"
           className={`${buttonVariants({
             variant: "outline",
           })} flex items-center gap-2 p-8`}

@@ -5,9 +5,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-DarkTako text-white font-inter w-full py-8">
-      <div className="container mx-auto">
+      <div className="md:container px-4 md:px-0">
         <div className="block md:flex justify-between pb-12 gap-8">
-          <div className="w-1/2">
+          <div className="md:w-1/2">
             <div className="flex items-center gap-4">
               <Link href="/">
                 <Image
@@ -20,12 +20,11 @@ const Footer = () => {
 
               <h1 className="font-bold">PT. CAHAYA MERCUSUAR INDONESIA</h1>
             </div>
-            <h2 className="text-slate-300">
-              Lorem ipsum dolor sit amet consectetur. Convallis duis nulla eget
-              nulla sed bibendum leo. Ultrices consectetur sed massa eu tellus
-              adipiscing morbi eros risus.
+            <h2 className="text-slate-300 w-full md:max-w-md">
+              Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk Semua
+              Jenis Event Anda.
             </h2>
-            <div className="flex gap-4 pt-6 items-center">
+            {/* <div className="flex gap-4 pt-6 items-center">
               <Link
                 href="https://www.instagram.com/tako.koporasi/"
                 target="__blank"
@@ -78,14 +77,14 @@ const Footer = () => {
                   height={24}
                 />
               </Link>
-            </div>
+            </div> */}
           </div>
-          <div>
+          {/* <div>
             <ul>
               Services
               <li></li>
             </ul>
-          </div>
+          </div> */}
           <div className="flex gap-4 pt-6 items-center"></div>
         </div>
 

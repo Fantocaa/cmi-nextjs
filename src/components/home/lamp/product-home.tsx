@@ -44,7 +44,7 @@ export default function ProductHome({ product }: Props) {
                   height={500}
                 />
                 <div className="relative bg-white p-6">
-                  <h3 className=" text-2xl font-semibold text-darkcmi truncate">
+                  <h3 className=" text-xl font-semibold text-darkcmi line-clamp-2 text-left">
                     {prod.nama}
                   </h3>
                 </div>

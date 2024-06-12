@@ -1,52 +1,41 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button"; // Pastikan jalur impor sesuai dengan lokasi Button Anda
+import HomeLightbox from "../product/product-page/lightbox/home-lightbox";
 
 async function getData(): Promise<ProductProps> {
-  const res = await fetch("https://jsonplaceholder.typicode.com/photos", {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    "http://cmi_backend_filament.test/api/admin/image-homes",
+    {
+      cache: "no-store",
+    }
+  );
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-  const products: Product[] = await res.json();
-  return { products };
+
+  const jsonResponse = await res.json();
+  const image = jsonResponse.data;
+  return { image };
 }
 
 type Product = {
-  albumId: number;
   id: number;
-  title: string;
-  url: string;
-  thumbnailUrl: string;
+  image_name: string[];
 };
 
 type ProductProps = {
-  products: Product[];
+  image: Product[];
 };
 
 export default async function Galery() {
-  const { products } = await getData();
+  const { image } = await getData();
+
   return (
-    <div className="container flex justify-center items-center">
-      <div className="grid grid-cols-3 gap-4">
-        {products.slice(0, 6).map((product, idx) => (
-          <div key={idx} className="m-4">
-            <div className="group relative block overflow-hidden rounded-xl border border-darkcmi border-opacity-10 shadow-lg">
-              <div>
-                <Image
-                  src={product.url}
-                  alt={product.title}
-                  className="h-72 w-full object-cover transition duration-500 group-hover:scale-105 bg-white text-white"
-                  width={500}
-                  height={500}
-                />
-              </div>
-            </div>
-          </div>
-        ))}
+    <>
+      <div className="container">
+        <HomeLightbox image={image} />
       </div>
-    </div>
+    </>
   );
 }

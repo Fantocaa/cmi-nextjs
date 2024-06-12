@@ -6,6 +6,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import "../../app/globals.css";
 import { buttonVariants } from "@/components/ui/button";
+import { IconBrandWhatsapp } from "@tabler/icons-react";
 
 // import { Icons } from "@/components/icons"
 import {
@@ -77,13 +78,14 @@ export function MainNav() {
 
   return (
     <nav className="bg-darkcmi w-full fixed z-50">
-      <div className="container mx-auto flex justify-between py-4 items-center">
+      <div className="container mx-auto flex justify-between py-2 items-center">
         <Link href="/">
           <Image
             src="/images/logo/cmi putih.webp"
-            width={96}
+            width={128}
             height={48}
             alt="Logo"
+            className="w-28 2xl:w-32"
           />
         </Link>
         <NavigationMenu>
@@ -94,7 +96,7 @@ export function MainNav() {
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
-                      <a
+                      <Link
                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                         href="/"
                       >
@@ -105,7 +107,7 @@ export function MainNav() {
                           Terangi Setiap Momen dengan Solusi LED Display Terbaik
                           untuk Semua Jenis Event Anda.
                         </p>
-                      </a>
+                      </Link>
                     </NavigationMenuLink>
                   </li>
                   <ListItem
@@ -157,27 +159,27 @@ export function MainNav() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            {/* <NavigationMenuItem>
+            <NavigationMenuItem>
               <Link href="/products" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Product
                 </NavigationMenuLink>
               </Link>
-            </NavigationMenuItem> */}
-            {/* <NavigationMenuItem>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
               <Link href="/about" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   About
                 </NavigationMenuLink>
               </Link>
-            </NavigationMenuItem> */}
-            {/* <NavigationMenuItem>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
               <Link href="/contact" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Contact
                 </NavigationMenuLink>
               </Link>
-            </NavigationMenuItem> */}
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
         {/* <Link
@@ -203,13 +205,14 @@ export function MainNav() {
             variant: "outline",
           })} flex items-center gap-2 p-8`}
         >
-          <Image
+          {/* <Image
             src="/images/icon/whatsapp.svg"
             width={24}
             height={24}
             alt="whatsapp icon"
-          />
-          More Information
+          /> */}
+          <IconBrandWhatsapp />
+          Contact Us
         </Link>
       </div>
     </nav>

@@ -83,7 +83,7 @@ export default function Hero() {
           </motion.div>
         </AuroraBackground> */}
         <div className="h-screen w-full flex justify-center items-center z-50 bg-darkcmi bg-opacity-80 pt-16 2xl:pt-0">
-          <div className="h-full w-full flex flex-col gap-5 justify-center m-auto items-center text-center px-4 sm:px-0">
+          <div className="h-full w-full flex flex-col gap-4 justify-center m-auto items-center text-center px-4 sm:px-0">
             <div
               //   variants={slideInFromTop}
               className="Welcome-box py-[8px] px-[7px] border border-[#BF212F] opacity-[0.9] flex justify-center items-center text-center "
@@ -110,7 +110,7 @@ export default function Hero() {
 
             <p
               //   variants={slideInFromLeft(0.8)}
-              className="text-lg text-white my-5 max-w-2xl 2xl:max-w-[960px]"
+              className="text-lg text-white my-4 max-w-2xl 2xl:max-w-[960px]"
             >
               Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk Semua
               Jenis Event Anda. Pengalaman Visual yang Luar Biasa dan

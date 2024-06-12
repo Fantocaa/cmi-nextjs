@@ -5,13 +5,37 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "../ui/button";
 
 const Whychooseus = () => {
   return (
-    <div className="h-full w-full flex justify-center items-center">
-      <Accordion type="single" collapsible className="w-1/2">
+    <div className="container flex justify-center gap-8">
+      <div className="w-1/2 pt-4">
+        <h1 className="text-5xl font-semibold">
+          Why{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-orangecmi to-redcmi">
+            Choose Us?
+          </span>
+        </h1>
+        <p className="text-lg py-4 leading-normal max-w-[35rem]">
+          Kami memahami betapa pentingnya visual dan pencahayaan dalam
+          menciptakan pengalaman acara yang mengesankan dan profesional. Dengan
+          pengalaman dan dedikasi kami, kami menawarkan solusi LED dan
+          multimedia berkualitas tinggi yang dirancang untuk memenuhi kebutuhan
+          unik Anda.
+        </p>
+        <Button className="bg-opacity-100 py-2 px-8 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
+          About Us
+        </Button>
+      </div>
+      <Accordion
+        type="single"
+        collapsible
+        className="w-1/2"
+        defaultValue="item-1"
+      >
         <AccordionItem value="item-1">
-          <AccordionTrigger className="text-3xl">Versatility</AccordionTrigger>
+          <AccordionTrigger className="text-3xl">Customizable</AccordionTrigger>
           <AccordionContent>
             Lorem ipsum dolor sit amet consectetur. Convallis duis nulla eget
             nulla sed bibendum leo. Ultrices consectetur sed massa eu tellus
@@ -26,14 +50,14 @@ const Whychooseus = () => {
             adipiscing morbi eros risus.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-3">
+        {/* <AccordionItem value="item-3">
           <AccordionTrigger className="text-3xl">Innovation</AccordionTrigger>
           <AccordionContent>
             Lorem ipsum dolor sit amet consectetur. Convallis duis nulla eget
             nulla sed bibendum leo. Ultrices consectetur sed massa eu tellus
             adipiscing morbi eros risus.
           </AccordionContent>
-        </AccordionItem>
+        </AccordionItem> */}
         <AccordionItem value="item-4">
           <AccordionTrigger className="text-3xl">Best Price</AccordionTrigger>
           <AccordionContent>
@@ -43,7 +67,6 @@ const Whychooseus = () => {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
-      <div className="w-1/2"></div>
     </div>
   );
 };

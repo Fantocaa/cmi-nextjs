@@ -25,18 +25,21 @@ import {
 } from "@/components/ui/select";
 import { usePathname, useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
-// import useProductStore from "@/components/store/useProductStore";
+import { Search } from "lucide-react";
+import useProductStore from "@/components/store/useProductStore";
 import Filter from "./product-page/filter";
-import { BeatLoader } from "react-spinners";
-import { Search, X } from "lucide-react";
 
 interface DetailProductProps {
   id: number;
-  nama: string;
-  deskripsi: string;
-  spesifikasi: string;
-  category_name: string;
+  title: string;
+  description: string;
+  category: string;
   image: string;
+  rating: {
+    rate: string;
+    count: string;
+  };
+  price: number;
 }
 
 interface Props {
@@ -50,24 +53,12 @@ export default function ProductPage({ products, categories }: Props) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [selectedCategory, setSelectedCategory] = useState("all");
-  const [categoryToShow, setCategoryToShow] = useState("all");
-  const [loading, setLoading] = useState(true); // Tambahkan keadaan loading
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const pageParam = searchParams.get("page");
   const [sortBy, setSortBy] = useState("new");
-  // const setProduct = useProductStore((state) => state.setProduct);
-  // console.log(products);
-
-  useEffect(() => {
-    // Contoh: Menunggu 2 detik sebelum mengatur loading menjadi false
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timeout);
-  }, []);
+  const setProduct = useProductStore((state) => state.setProduct);
 
   useEffect(() => {
     let updatedProducts = [...products]; // Salin products ke updatedProducts
@@ -75,7 +66,7 @@ export default function ProductPage({ products, categories }: Props) {
     if (searchTerm) {
       setCurrentPage(1);
       const filtered = products.filter((product) =>
-        product.nama.toLowerCase().includes(searchTerm.toLowerCase())
+        product.title.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredProducts(filtered);
     } else if (pageParam) {
@@ -97,14 +88,14 @@ export default function ProductPage({ products, categories }: Props) {
     if (searchTerm) {
       setCurrentPage(1); // Reset ke halaman pertama saat melakukan pencarian
       updatedProducts = updatedProducts.filter((product) =>
-        product.nama.toLowerCase().includes(searchTerm.toLowerCase())
+        product.title.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
     // Filter berdasarkan kategori jika kategori telah dipilih
     if (selectedCategory !== "all") {
       updatedProducts = updatedProducts.filter(
-        (product) => product.category_name === selectedCategory
+        (product) => product.category === selectedCategory
       );
     }
 
@@ -149,19 +140,15 @@ export default function ProductPage({ products, categories }: Props) {
     } else {
       router.push(newUrl);
       const filtered = products.filter(
-        (product) => product.category_name === category
+        (product) => product.category === category
       );
       setFilteredProducts(filtered);
     }
   };
 
-  const handleShowProduct = () => {
-    setCategoryToShow(selectedCategory);
-    setCurrentPage(1);
-  };
-
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
+  //   const currentPosts = products.slice(firstPostIndex, lastPostIndex);
   const currentPosts = filteredProducts.slice(firstPostIndex, lastPostIndex);
 
   const handleNextPage = () => {
@@ -178,17 +165,16 @@ export default function ProductPage({ products, categories }: Props) {
 
   return (
     <>
-      <div className="container flex gap-8 my-16">
-        <div className="w-1/3">
+      <div className="container flex">
+        <div className="w-1/3 py-12">
           <Filter
             categories={categories}
             selectedCategory={selectedCategory}
             handleCategoryChange={handleCategoryChange}
-            handleShowProduct={handleShowProduct}
           />
         </div>
-        <div className="w-full">
-          <div className="md:flex rounded-xl w-full justify-between">
+        <div>
+          <div className="md:flex p-8 rounded-xl mt-4 w-full justify-between mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <div className="flex gap-4 relative pb-4 md:pb-0">
               <Search className="absolute translate-y-3 translate-x-4 text-white" />
               <Input
@@ -219,80 +205,79 @@ export default function ProductPage({ products, categories }: Props) {
                   </SelectGroup>
                 </SelectContent>
               </Select>
+
+              {/* <Select
+                onValueChange={(value: string) => handleCategoryChange(value)}
+              >
+                <SelectTrigger className="w-[180px] h-12 rounded-full px-4">
+                  <SelectValue
+                    placeholder={sortBy === "all" ? "Category" : "All"}
+                  />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectItem value="all">All</SelectItem>
+
+                    {categories.map((category, index) => (
+                      <SelectItem key={index} value={category}>
+                        {category}
+                      </SelectItem>
+                    ))}
+                  </SelectGroup>
+                </SelectContent>
+              </Select> */}
             </div>
           </div>
-          <div className="mx-auto max-w-screen-xl">
-            {loading ? (
-              <div className="flex flex-col justify-center items-center h-screen gap-2">
-                <BeatLoader loading={loading} color="#F9A73E" size={10} />
-                <h1 className="text-xl">Loading</h1>
-              </div>
-            ) : (
-              <>
-                {currentPosts.length > 0 ? (
-                  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 w-full py-8">
-                    {currentPosts.map((product, idx) => (
-                      <div key={idx}>
-                        <div className="group relative block overflow-hidden rounded-xl bg-white">
-                          <Link
-                            href={{
-                              pathname: "/products/detail",
-                              query: { id: product?.id },
-                            }}
-                            key={product.id}
-                          >
-                            <div>
-                              <Image
-                                src={product.image[0]}
-                                alt="photo-product"
-                                className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
-                                width={500}
-                                height={500}
-                              />
-                              <div className="relative bg-white p-4">
-                                <h3 className="text-lg 2xl:text-xl font-semibold text-darkcmi line-clamp-2">
-                                  {product.nama}
-                                </h3>
-                              </div>
+          <div className="mx-auto max-w-screen-xl px-4 sm:px-6 sm:pb-12 lg:px-8">
+            <>
+              {currentPosts.length > 0 ? (
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 w-full py-6">
+                  {currentPosts.map((product, idx) => (
+                    <div key={idx}>
+                      <div className="group relative block overflow-hidden rounded-xl border border-darkcmi border-opacity-10 shadow-lg">
+                        <Link
+                          // href={`/products/${product.id}`}
+                          href={{
+                            pathname: "/products/detail",
+                            query: { id: product?.id },
+                          }}
+                          key={product.id}
+                          // onClick={() => setProduct(product)}
+                        >
+                          <div>
+                            <Image
+                              src={product.image}
+                              alt="photo-location"
+                              className="h-72 w-full object-contain p-8 transition duration-500 group-hover:scale-105 bg-white"
+                              width={500}
+                              height={500}
+                            />
+                            <div className="relative bg-white p-6">
+                              <h3 className=" text-2xl font-semibold text-darkcmi truncate">
+                                {/* Bangkok Dinner Cruise */}
+                                {product.title}
+                              </h3>
                             </div>
-                          </Link>
-                          <div className="w-full flex justify-center pb-6">
-                            <Link
-                              href="https://api.whatsapp.com/send?phone=628170500601"
-                              className=" w-full px-4"
-                              target="__blank"
-                            >
-                              <Button
-                                variant="default"
-                                className="text-center w-full bg-darkcmi hover:bg-darkcmi hover:bg-opacity-90"
-                              >
-                                Contact Us
-                              </Button>
-                            </Link>
                           </div>
-                        </div>
+                        </Link>
                       </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="flex justify-center items-center h-64 w-full">
-                    <h1 className="text-2xl font-bold text-gray-500">
-                      Tidak ada produk yang ditemukan
-                    </h1>
-                  </div>
-                )}
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 w-full p-10"></div>
+              )}
 
-                <PaginationSection
-                  // products={products.length}
-                  products={filteredProducts} // Menggunakan filteredProducts yang berisi produk yang sudah difilter
-                  postsPerPage={postsPerPage}
-                  currentPage={currentPage}
-                  setCurrentPage={setCurrentPage}
-                  handlePrevPage={handlePrevPage}
-                  handleNextPage={handleNextPage}
-                />
-              </>
-            )}
+              <PaginationSection
+                // products={products.length}
+                products={filteredProducts} // Menggunakan filteredProducts yang berisi produk yang sudah difilter
+                postsPerPage={postsPerPage}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                handlePrevPage={handlePrevPage}
+                handleNextPage={handleNextPage}
+              />
+            </>
           </div>
         </div>
       </div>
@@ -343,7 +328,9 @@ function PaginationSection({
         <PaginationItem
           key={i}
           className={
-            currentPage === i ? "rounded-md text-darkcmi bg-white" : ""
+            currentPage === i
+              ? "bg-content bg-darkcmi rounded-md text-white"
+              : ""
           }
         >
           <PaginationLink
@@ -351,7 +338,7 @@ function PaginationSection({
               setCurrentPage(i);
               router.push(`?page=${i}`);
             }}
-            className=""
+            className="bg-darkcmi opacity-50"
           >
             {i}
           </PaginationLink>

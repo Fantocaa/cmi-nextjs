@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -25,67 +26,34 @@ const Footer = () => {
                 Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
                 Semua Jenis Event Anda.
               </h2>
-              {/* <div className="flex gap-4 pt-6 items-center">
-              <Link
-                href="https://www.instagram.com/tako.koporasi/"
-                target="__blank"
-                aria-label="Instagram"
-              >
-                <Image
-                  src="/images/icon/ig.svg"
-                  alt="Instagram"
-                  aria-label="Instagram"
-                  width={24}
-                  height={24}
-                />
-              </Link>
-              <Link href="">
-                <Image
-                  src="/images/icon/fb.svg"
-                  alt="Facebook"
-                  aria-label="Facebook"
-                  width={24}
-                  height={24}
-                />
-              </Link>
-              <Link href="">
-                <Image
-                  src="/images/icon/yt.svg"
-                  alt="Youtube"
-                  aria-label="Youtube"
-                  width={24}
-                  height={24}
-                />
-              </Link>
-              <Link href="">
-                <Image
-                  src="/images/icon/x.svg"
-                  alt="X"
-                  aria-label="X"
-                  width={24}
-                  height={24}
-                />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/company/tako-anugerah-koporasi-pt/"
-                target="_blank"
-                aria-label="Linkedin"
-              >
-                <Image
-                  src="/images/icon/linkedin.svg"
-                  alt="linkedin"
-                  width={24}
-                  height={24}
-                />
-              </Link>
-            </div> */}
             </div>
-            {/* <div>
-            <ul>
-              Services
-              <li></li>
-            </ul>
-          </div> */}
+            <div className="md:w-1/2 flex flex-col items-end">
+              <div>
+                <h1 className="pb-4 text-xl text-left">Contact Us</h1>
+                <ul>
+                  <li className="flex items-center gap-4 mb-4">
+                    <Phone />
+                    <h1 className="2xl:text-lg font-medium ">
+                      +62 81 705 006 01
+                    </h1>
+                  </li>
+                  <li className="flex items-center gap-4 mb-4">
+                    <Mail />
+                    <h1 className="2xl:text-lg font-medium ">
+                      marketing@cahayamercusuar.com
+                    </h1>
+                  </li>
+                  <li className="flex items-center gap-4">
+                    <MapPin />
+                    <h1 className="2xl:text-lg font-medium md:max-w-md 2xl:max-w-md w-64 md:w-full">
+                      Jl. Dharmahusada Indah Blok I Nomor Ruko 16 E, RT.01,
+                      RW.09, Kec. Mulyorejo, Kel. Mulyorejo Surabaya Kode pos :
+                      60115
+                    </h1>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div className="flex gap-4 pt-6 items-center"></div>
           </div>
 

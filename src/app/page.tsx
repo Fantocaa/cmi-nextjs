@@ -24,7 +24,6 @@ export default async function Home() {
         height={1080}
         className="fixed -z-50"
       />
-
       <>
         <Hero />
         <Services />

@@ -32,16 +32,20 @@ export function LampDemo({ product }: Props) {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className=" max-w-full mt-8 bg-gradient-to-br from-slate-100 to-slate-300 py-4 text-center bg-clip-text text-4xl font-medium tracking-tight leading-loose text-transparent px-4 md:px-0 container"
+        className="max-w-full mt-8 bg-gradient-to-br from-slate-100 to-slate-300 text-center bg-clip-text text-4xl font-medium tracking-tight leading-loose text-transparent"
       >
         <h1 className="max-w-4xl 2xl:max-w-6xl text-center mx-auto text-3xl md:text-5xl 2xl:text-6xl font-semibold">
-          Solusi LED dan Multimedia Berkualitas Tinggi untuk Kebutuhan Anda
+          {/* Solusi LED dan Multimedia Berkualitas Tinggi untuk Kebutuhan Anda */}
+          High-Quality LED and Multimedia Solutions for Your Needs
         </h1>
-        <p className="text-xl 2xl:text-2xl mt-8 max-w-4xl text-center mx-auto">
-          Kami menyediakan sewa LED, peralatan pencahayaan, dan multimedia
+        <p className="text-xl 2xl:text-2xl mt-8 max-w-3xl text-center mx-auto">
+          {/* Kami menyediakan sewa LED, peralatan pencahayaan, dan multimedia
           equipment berkualitas tinggi untuk memenuhi kebutuhan acara Anda.
           Percayakan pada kami untuk memberikan solusi yang profesional dan
-          memukau.
+          memukau. */}
+          We provide LED rental, lighting equipment, and high-quality multimedia
+          equipment to meet the needs of your events. Trust us to deliver
+          professional and impressive solutions.
         </p>
         <Link
           href="https://drive.tako.co.id/d/s/yl5SVM0c1iGcO1gI4oMvZo23KDkLtzaO/oE7q9J05mcFHvyzZacRMy9mSwtXB_SBM-Urfg5aCYags"
@@ -132,7 +136,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden  w-full rounded-md z-0 xl:pt-72 2xl:pt-[20rem]",
+        "relative flex lg:min-h-screen flex-col items-center justify-center overflow-hidden  w-full rounded-md z-0 pt-72 xl:pt-72 2xl:pt-[20rem]",
         className
       )}
     >
@@ -203,7 +207,7 @@ export const LampContainer = ({
           <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] "></div>
         </div>
 
-        <div className="relative z-50 flex -translate-y-80 md:-translate-y-28 2xl:-translate-y-16 flex-col items-center">
+        <div className="relative z-50 flex -translate-y-32 md:-translate-y-28 2xl:-translate-y-16 flex-col items-center">
           {children}
         </div>
       </div>

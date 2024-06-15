@@ -89,12 +89,16 @@ export default function Hero() {
 
             <p
               //   variants={slideInFromLeft(0.8)}
-              className="text-lg text-white my-4 max-w-2xl 2xl:max-w-[960px]"
+              className="text-lg lg:text-2xl text-white my-4 max-w-2xl 2xl:max-w-[960px]"
             >
-              Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk Semua
+              {/* Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk Semua
               Jenis Event Anda. Pengalaman Visual yang Luar Biasa dan
               Mengesankan, Dijamin Membawa Sukses dan Kemeriahan ke Setiap Sudut
-              Ruangan.
+              Ruangan. */}
+              Illuminate Every Moment with the Best LED Display Solutions for
+              All Your Events. Extraordinary and Impressive Visual Experiences,
+              Guaranteed to Bring Success and Festivity to Every Corner of the
+              Room.
             </p>
             <Link
               href="https://api.whatsapp.com/send?phone=628170500601"

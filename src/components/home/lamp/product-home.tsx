@@ -24,7 +24,7 @@ export default function ProductHome({ product }: Props) {
   }
 
   return (
-    <div className="grid grid-cols-4 gap-4 pb-16 auto-rows-min">
+    <div className="hidden lg:grid grid-cols-4 gap-4 pb-16 auto-rows-min">
       {product.slice(0, 4).map((prod, idx) => (
         <div key={idx} className="">
           <div className="group relative block overflow-hidden rounded-xl border border-darkcmi border-opacity-10 shadow-lg">

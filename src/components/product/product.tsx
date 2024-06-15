@@ -179,7 +179,7 @@ export default function ProductPage({ products, categories }: Props) {
   return (
     <>
       <div className="container flex gap-8 my-16">
-        <div className="w-1/3">
+        <div className="w-1/3 hidden md:block">
           <Filter
             categories={categories}
             selectedCategory={selectedCategory}
@@ -194,7 +194,7 @@ export default function ProductPage({ products, categories }: Props) {
               <Input
                 id="search"
                 type="text"
-                placeholder="Cari Produk disini"
+                placeholder="Search Product Here"
                 className="h-12 w-full md:w-96 rounded-full px-4 pl-12 bg-darkcmi text-white"
                 value={searchTerm}
                 onChange={handleSearchChange}
@@ -206,16 +206,34 @@ export default function ProductPage({ products, categories }: Props) {
               >
                 <SelectTrigger className="w-[180px] h-12 rounded-full px-4">
                   <SelectValue
-                    placeholder={
-                      sortBy === "new" ? "Paling Baru" : "Paling Lama"
-                    }
+                    placeholder={sortBy === "new" ? "Newest" : "Latest"}
                   ></SelectValue>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Sort By</SelectLabel>
-                    <SelectItem value="new">Paling Baru</SelectItem>
-                    <SelectItem value="old">Paling Lama</SelectItem>
+                    <SelectItem value="new">Newest</SelectItem>
+                    <SelectItem value="old">Latest</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+              <Select
+                onValueChange={(value: string) => handleCategoryChange(value)}
+              >
+                <SelectTrigger className="w-[180px] h-12 rounded-full px-4 md:hidden">
+                  <SelectValue
+                    placeholder={sortBy === "all" ? "Category" : "All"}
+                  />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectItem value="all">All</SelectItem>
+
+                    {categories.map((category, index) => (
+                      <SelectItem key={index} value={category}>
+                        {category}
+                      </SelectItem>
+                    ))}
                   </SelectGroup>
                 </SelectContent>
               </Select>

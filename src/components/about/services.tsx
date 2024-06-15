@@ -24,8 +24,8 @@ export default function Services() {
             className="absolute -z-10"
           />
 
-          <div className="flex gap-8 items-center pt-40">
-            <div className="w-1/2">
+          <div className="md:flex gap-8 items-center pt-40">
+            <div className="w-full md:w-1/2">
               <h1 className="text-4xl font-semibold mb-4">Design</h1>
               <p className="max-w-lg text-lg">
                 Every venue that we handle, treated with a different design and
@@ -34,7 +34,7 @@ export default function Services() {
                 Therefore, the system can run maximal and efficient.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2 pt-8 md:pt-0">
               <Image
                 src="/images/bg/20230608_151945 1.png"
                 alt="image-1"
@@ -45,8 +45,8 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="flex flex-row-reverse gap-8 items-center pt-16">
-            <div className="w-1/2">
+          <div className="md:flex flex-row-reverse gap-8 items-center pt-16">
+            <div className="w-full md:w-1/2">
               <h1 className="text-4xl font-semibold mb-4">
                 Installation Testing & Commisioning
               </h1>
@@ -58,7 +58,7 @@ export default function Services() {
                 result and accurates colors.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2 pt-8 md:pt-0">
               <Image
                 src="/images/bg/20220117_155948.jpg"
                 alt="image-1"
@@ -69,8 +69,8 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="flex gap-8 items-center pt-16">
-            <div className="w-1/2">
+          <div className="md:flex gap-8 items-center pt-16">
+            <div className="w-full md:w-1/2">
               <h1 className="text-4xl font-semibold mb-4">
                 After Sales Service
               </h1>
@@ -81,7 +81,7 @@ export default function Services() {
                 handle the service for al product that we supply.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2 pt-8 md:pt-0">
               <Image
                 src="/images/bg/Foto.jpg"
                 alt="image-1"

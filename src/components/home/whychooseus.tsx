@@ -9,20 +9,24 @@ import { Button } from "../ui/button";
 
 const Whychooseus = () => {
   return (
-    <div className="container flex justify-center gap-8">
-      <div className="w-1/2 pt-4">
-        <h1 className="text-5xl font-semibold">
+    <div className="container md:flex justify-center gap-8">
+      <div className="w-full md:w-1/2 pt-4">
+        <h1 className="text-4xl md:text-5xl font-semibold">
           Why{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-orangecmi to-redcmi">
             Choose Us?
           </span>
         </h1>
         <p className="text-lg py-4 leading-normal max-w-[35rem]">
-          Kami memahami betapa pentingnya visual dan pencahayaan dalam
+          {/* Kami memahami betapa pentingnya visual dan pencahayaan dalam
           menciptakan pengalaman acara yang mengesankan dan profesional. Dengan
           pengalaman dan dedikasi kami, kami menawarkan solusi LED dan
           multimedia berkualitas tinggi yang dirancang untuk memenuhi kebutuhan
-          unik Anda.
+          unik Anda. */}
+          We understand the importance of visuals and lighting in creating
+          memorable and professional event experiences. With our experience and
+          dedication, we offer high-quality LED and multimedia solutions
+          designed to meet your unique needs.
         </p>
         <Button className="bg-opacity-100 py-2 px-8 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
           About Us
@@ -31,7 +35,7 @@ const Whychooseus = () => {
       <Accordion
         type="single"
         collapsible
-        className="w-1/2"
+        className="w-full md:w-1/2 mt-8 md:mt-0"
         defaultValue="item-1"
       >
         <AccordionItem value="item-1">

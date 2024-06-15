@@ -30,7 +30,7 @@ export default function HomeLightbox({ image }: ProductProps) {
     <>
       {image.slice(0, 6).map((product, idx) => (
         <div key={idx}>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {product.image_name.map((imgSrc, imgIdx) => (
               <div key={imgIdx}>
                 <div

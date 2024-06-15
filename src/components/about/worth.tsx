@@ -8,14 +8,14 @@ export default function Worth() {
   return (
     <div className="bg-orangecmi">
       <div className="container text-darkcmi py-16">
-        <div className="flex gap-8">
-          <div className="w-1/2">
+        <div className="md:flex gap-8">
+          <div className="w-full md:w-1/2">
             <h1 className="text-5xl leading-tight font-bold max-w-[500px]">
               Become a Company that is trustworthy and reliable in answering the
               needs of stage lighting and LED Display
             </h1>
           </div>
-          <div className="w-1/2">
+          <div className="w-full md:w-1/2 pt-12 md:pt-0">
             <ul className="flex flex-col gap-8">
               <li>
                 <div className="flex gap-8 items-center">

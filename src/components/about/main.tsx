@@ -6,8 +6,8 @@ export default function Header() {
     <>
       <div className="py-32">
         <div className="container text-white">
-          <div className="flex gap-4 items-end">
-            <div className="w-1/2">
+          <div className="md:flex gap-4 items-end">
+            <div className="w-full md:w-1/2">
               <div className="flex gap-4 items-start">
                 <h1 className="text-6xl font-bold mb-4">About Us</h1>
               </div>
@@ -17,7 +17,7 @@ export default function Header() {
                 Indonesia.
               </h1>
             </div>
-            <h1 className="w-1/2 text-lg">
+            <h1 className="w-full md:w-1/2 text-lg pt-8 md:pt-0">
               Based From this experience, we made a decission to start new
               company in 2023 named{" "}
               <span className="font-semibold text-orangecmi">

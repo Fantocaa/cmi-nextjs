@@ -20,7 +20,7 @@ const About = () => {
         alt=""
         width={1920}
         height={1080}
-        className="fixed -z-50"
+        className="fixed -z-50 h-screen object-cover"
       />
       <>
         <Header />

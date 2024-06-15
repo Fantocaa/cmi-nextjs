@@ -18,6 +18,19 @@ type Props = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
+export const generateMetadata = async ({ searchParams }: Props) => {
+  const idString = searchParams?.id;
+  const id = Number(idString);
+
+  const product = await getDetailProductsPage(id);
+
+  // console.log(product);
+
+  return {
+    title: `${product?.nama} ` + "- Cahaya Mercusuar Indonesia",
+  };
+};
+
 export default async function DetailProductPage({ searchParams }: Props) {
   // console.log(searchParams.id);
 
@@ -62,14 +75,14 @@ export default async function DetailProductPage({ searchParams }: Props) {
           <div className="text-white w-1/2">
             <h1 className="text-4xl font-bold">{product?.nama}</h1>
             <div className="mt-8">
-              <h2 className="py-4 text-2xl font-semibold">Deskripsi : </h2>
+              <h2 className="py-4 text-2xl font-semibold">Description : </h2>
               <div
                 className=" max-w-full break-words"
                 dangerouslySetInnerHTML={{ __html: product.deskripsi }}
               />
             </div>
             <div className="mt-8">
-              <h2 className="py-4 text-2xl font-semibold">Spesifikasi : </h2>
+              <h2 className="py-4 text-2xl font-semibold">Specification : </h2>
               <div
                 className=" max-w-full break-words"
                 dangerouslySetInnerHTML={{ __html: product.spesifikasi }}

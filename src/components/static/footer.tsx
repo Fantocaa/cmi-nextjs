@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <footer className="bg-darkcmi text-white font-inter w-full py-8 ">
       <div className="container">
-        <div className="px-4 md:px-0">
-          <div className="block md:flex justify-between pb-12 gap-8">
+        <div className=" lg:px-4 2xl:px-0">
+          <div className="block md:flex justify-between pb-4 md:pb-12 gap-8">
             <div className="md:w-1/2">
               <div className="flex items-center gap-4">
                 <Link href="/">
@@ -23,14 +23,14 @@ const Footer = () => {
                 <h1 className="font-bold">PT. CAHAYA MERCUSUAR INDONESIA</h1>
               </div>
               <h2 className="text-slate-300 w-full md:max-w-md">
-                Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk
-                Semua Jenis Event Anda.
+                Illuminate Every Moment with the Best LED Display Solutions for
+                All Your Events.
               </h2>
             </div>
-            <div className="md:w-1/2 flex flex-col items-end">
+            <div className="md:w-1/2 flex flex-col lg:items-end items-start pt-8 md:pt-0">
               <div>
                 <h1 className="pb-4 text-xl text-left">Contact Us</h1>
-                <ul>
+                <ul className="text-slate-300">
                   <li className="flex items-center gap-4 mb-4">
                     <Phone />
                     <h1 className="2xl:text-lg font-medium ">
@@ -40,12 +40,12 @@ const Footer = () => {
                   <li className="flex items-center gap-4 mb-4">
                     <Mail />
                     <h1 className="2xl:text-lg font-medium ">
-                      marketing@cahayamercusuar.com
+                      info@cahayamercusuar.com
                     </h1>
                   </li>
                   <li className="flex items-center gap-4">
                     <MapPin />
-                    <h1 className="2xl:text-lg font-medium md:max-w-md 2xl:max-w-md w-64 md:w-full">
+                    <h1 className="2xl:text-lg font-medium md:max-w-md 2xl:max-w-md w-full md:w-64 lg:w-full">
                       Jl. Dharmahusada Indah Blok I Nomor Ruko 16 E, RT.01,
                       RW.09, Kec. Mulyorejo, Kel. Mulyorejo Surabaya Kode pos :
                       60115
@@ -60,7 +60,7 @@ const Footer = () => {
           <div className="w-full h-1 bg-white rounded-2xl"></div>
           <div>
             <h1 className="text-xs md:text-base text-center pt-12">
-              © 2024 PT. TAKO ANUGERAH KOPORASI, All Rights Reserved
+              © 2024 PT. CAHAYA MERCUSUAR INDONESIA, All Rights Reserved
             </h1>
           </div>
         </div>

@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 async function getData(): Promise<ProductProps> {
   const res = await fetch(
     "http://cmi_backend_filament.test/api/admin/projects",
+    // "https://backend.cahayamercusuar.com/api/admin/projects",
+
     {
       cache: "no-store",
     }

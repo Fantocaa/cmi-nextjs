@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const Whychooseus = () => {
   return (
@@ -28,9 +29,11 @@ const Whychooseus = () => {
           dedication, we offer high-quality LED and multimedia solutions
           designed to meet your unique needs.
         </p>
-        <Button className="bg-opacity-100 py-2 px-8 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
-          About Us
-        </Button>
+        <Link href="/about">
+          <Button className="bg-opacity-100 py-2 px-8 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
+            About Us
+          </Button>
+        </Link>
       </div>
       <Accordion
         type="single"

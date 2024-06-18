@@ -10,8 +10,8 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home | PT. Cahaya Mercusuar Indonesia | Sewa LED Berkualitas Tinggi",
-  description: "Make your Journey to the next level",
+  title: "Home | PT. Cahaya Mercusuar Indonesia",
+  description: "Sewa LED Berkualitas Tinggi",
 };
 
 export default async function Home() {

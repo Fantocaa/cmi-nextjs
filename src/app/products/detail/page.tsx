@@ -27,7 +27,7 @@ export const generateMetadata = async ({ searchParams }: Props) => {
   // console.log(product);
 
   return {
-    title: `${product?.nama} ` + "- Cahaya Mercusuar Indonesia",
+    title: `${product?.nama} ` + "| PT. Cahaya Mercusuar Indonesia",
   };
 };
 

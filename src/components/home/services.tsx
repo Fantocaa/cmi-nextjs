@@ -29,7 +29,9 @@ export default async function Services() {
 
   return (
     <div>
-      <LampDemo product={products} />
+      <LampDemo
+      // product={products}
+      />
     </div>
   );
 }

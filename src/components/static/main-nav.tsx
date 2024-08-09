@@ -319,7 +319,8 @@ export const NavLinks = [
   { id: 2, name: "About", path: "/about" },
   { id: 3, name: "Product", path: "/products" },
   { id: 4, name: "Project", path: "/project" },
-  { id: 5, name: "Careers", path: "https://karier.tako.co.id/" },
+  { id: 5, name: "Blog", path: "/blog" },
+  { id: 6, name: "Careers", path: "https://karier.tako.co.id/" },
 ];
 
 export function MainNav() {

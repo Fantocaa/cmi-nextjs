@@ -38,7 +38,7 @@ export default function Project({ image }: ProductProps) {
               <Image
                 src={imgSrc}
                 alt={`image-${imgIdx}`}
-                className="h-72 w-full object-cover transition duration-500 group-hover:scale-105 bg-white text-white"
+                className="h-96 w-full object-cover transition duration-500 group-hover:scale-105 bg-white text-white"
                 width={500}
                 height={500}
                 onClick={() => setIndex2(imgIdx)}

@@ -34,8 +34,10 @@ export default async function Galery() {
 
   return (
     <>
-      <div className="container">
-        <HomeLightbox image={image} />
+      <div className="py-16 pt-24 bg-white text-darkcmi">
+        <div className="container">
+          <HomeLightbox image={image} />
+        </div>
       </div>
     </>
   );

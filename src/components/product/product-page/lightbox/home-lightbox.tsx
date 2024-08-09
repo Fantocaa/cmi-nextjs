@@ -32,18 +32,18 @@ export default function HomeLightbox({ image }: ProductProps) {
     <>
       {image.slice(0, 6).map((product, idx) => (
         <div key={idx}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-full items-center">
             <div className="mb-8">
               <h1 className="text-4xl md:text-5xl font-semibold">
                 Handling Project
               </h1>
-              <p className="text-lg py-4 leading-normal max-w-[35rem]">
+              <p className="text-lg py-4 leading-normal max-w-[26rem]">
                 Every project we handle is an opportunity to create something
                 extraordinary. We work together with clients to understand their
                 specific needs and provide customized solutions.
               </p>
               <Link href="/project">
-                <Button className="bg-opacity-100 py-2 px-8 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
+                <Button className="bg-opacity-100 py-2 px-8 text-center text-white cursor-pointer rounded-lg max-w-[200px]">
                   See All
                 </Button>
               </Link>
@@ -57,7 +57,7 @@ export default function HomeLightbox({ image }: ProductProps) {
                   <Image
                     src={imgSrc}
                     alt={`image-${imgIdx}`}
-                    className="h-72 w-full object-cover transition duration-500 group-hover:scale-105 bg-white text-white"
+                    className="h-96 w-full object-cover transition duration-500 group-hover:scale-105 bg-white text-white"
                     width={500}
                     height={500}
                   />

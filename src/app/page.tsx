@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: "Sewa LED Berkualitas Tinggi",
 };
 
-export default async function Home() {
+export default function Home() {
   return (
     <section className="relative">
       <Image
@@ -26,16 +26,11 @@ export default async function Home() {
       />
       <>
         <Hero />
+        <Whychooseus />
         <Services />
-        <div className="md:py-16 pb-16">
-          <Whychooseus />
-        </div>
         {/* <Videocompor /> */}
-        <div className="py-16">
-          <Galery />
-        </div>
-        <Cta />
-        {/* </div> */}
+        <Galery />
+        {/* <Cta /> */}
       </>
     </section>
   );

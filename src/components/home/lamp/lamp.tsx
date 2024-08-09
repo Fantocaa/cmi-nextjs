@@ -6,22 +6,25 @@ import { cn } from "@/lib/cn";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ProductHome from "./product-home";
+import AllProduct from "./all-product";
+import { Banknote, Cog, Cpu } from "lucide-react";
 
-interface DetailProductProps {
-  id: number;
-  nama: string;
-  deskripsi: string;
-  spesifikasi: string;
-  image: string[];
-  category_id: number;
-  category_name: string;
-}
+// interface DetailProductProps {
+//   id: number;
+//   nama: string;
+//   deskripsi: string;
+//   spesifikasi: string;
+//   image: string[];
+//   category_id: number;
+//   category_name: string;
+// }
 
-interface Props {
-  product: DetailProductProps[];
-}
+// interface Props {
+//   product: DetailProductProps[];
+// }
 
-export function LampDemo({ product }: Props) {
+export function LampDemo() {
+  // { product }: Props
   return (
     <LampContainer>
       <motion.div
@@ -59,16 +62,17 @@ export function LampDemo({ product }: Props) {
           </Button>
         </Link>
         <motion.div
-          initial={{ opacity: 0.5, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          // initial={{ opacity: 0.5, y: 100 }}
+          // whileInView={{ opacity: 1, y: 0 }}
           transition={{
             delay: 0.3,
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="mt-12 w-full"
+          // className="mt-6 w-full"
         >
-          <ProductHome product={product} />
+          {/* <ProductHome product={product} /> */}
+          <AllProduct />
         </motion.div>
       </motion.div>
     </LampContainer>
@@ -207,7 +211,7 @@ export const LampContainer = ({
           <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] "></div>
         </div>
 
-        <div className="relative z-50 flex -translate-y-32 md:-translate-y-28 2xl:-translate-y-16 flex-col items-center">
+        <div className="relative z-50 flex -translate-y-32 md:-translate-y-28 2xl:-translate-y-24 flex-col items-center">
           {children}
         </div>
       </div>

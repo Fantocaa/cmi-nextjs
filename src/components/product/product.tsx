@@ -144,10 +144,14 @@ export default function ProductPage({ products, categories }: Props) {
     )}&page=1`;
 
     if (category === "all") {
-      router.push(`${pathname}?page=1`); // Pastikan untuk reset halaman ke 1
+      router.push(`${pathname}?page=1`, {
+        scroll: false,
+      }); // Pastikan untuk reset halaman ke 1
       setFilteredProducts(products); // Reset ke semua produk jika kategori adalah 'all'
     } else {
-      router.push(newUrl);
+      router.push(newUrl, {
+        scroll: false,
+      });
       const filtered = products.filter(
         (product) => product.category_name === category
       );

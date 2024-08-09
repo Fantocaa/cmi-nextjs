@@ -89,7 +89,7 @@ export default function Hero() {
 
             <p
               //   variants={slideInFromLeft(0.8)}
-              className="text-lg lg:text-2xl text-white my-4 max-w-2xl 2xl:max-w-[960px]"
+              className="text-lg lg:text-xl 2xl:text-2xl text-white my-4 max-w-3xl 2xl:max-w-[960px]"
             >
               {/* Terangi Setiap Momen dengan Solusi LED Display Terbaik untuk Semua
               Jenis Event Anda. Pengalaman Visual yang Luar Biasa dan

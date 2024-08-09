@@ -171,6 +171,9 @@ export default function ProductPage({ products, categories }: Props) {
             categories={categories}
             selectedCategory={selectedCategory}
             handleCategoryChange={handleCategoryChange}
+            handleShowProduct={function (): void {
+              throw new Error("Function not implemented.");
+            }}
           />
         </div>
         <div>

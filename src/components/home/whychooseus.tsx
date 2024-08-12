@@ -7,7 +7,7 @@ const Whychooseus = () => {
   return (
     <>
       <section className="relative">
-        <div className="absolute inset-0 z-0">
+        {/* <div className="absolute inset-0 z-0">
           <Image
             src="/images/bg/elijah-ekdahl-8XxF2kYHIgo-unsplash.jpg"
             alt="Background Image"
@@ -20,21 +20,21 @@ const Whychooseus = () => {
             // priority
             className="object-cover object-bottom"
           />
-        </div>
+        </div> */}
 
         {/* Overlay putih dengan opacity */}
-        <div className="absolute inset-0 z-5 bg-white opacity-90"></div>
+        {/* <div className="absolute inset-0 z-5 bg-darkcmi opacity-90"></div> */}
 
         <div className="relative z-10 md:py-32 pb-16 ">
           <div className="container md:grid grid-cols-2 justify-center gap-8 items-center">
             <div className="w-full pt-4">
-              <h1 className="text-4xl md:text-5xl font-semibold text-darkcmi">
+              <h1 className="text-4xl md:text-5xl font-semibold text-white">
                 Why{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orangecmi to-redcmi">
                   Choose Us?
                 </span>
               </h1>
-              <p className="text-lg py-4 leading-normal max-w-[35rem] text-darkcmi">
+              <p className="text-lg py-4 leading-normal max-w-[35rem] text-white">
                 {/* Kami memahami betapa pentingnya visual dan pencahayaan dalam
           menciptakan pengalaman acara yang mengesankan dan profesional. Dengan
           pengalaman dan dedikasi kami, kami menawarkan solusi LED dan
@@ -46,14 +46,14 @@ const Whychooseus = () => {
                 multimedia solutions designed to meet your unique needs.
               </p>
               <Link href="/about">
-                <Button className="bg-opacity-100 py-2 px-8 text-center text-white cursor-pointer rounded-lg max-w-[200px]">
+                <Button className="py-2 px-8 max-w-[200px] button-services">
                   About Us
                 </Button>
               </Link>
             </div>
             <div>
               <Image
-                src="/images/logo/Cahaya Mercusuar Indonesia.png"
+                src="/images/logo/CMI Logo.png"
                 alt="cmi"
                 width={1440}
                 height={1440}

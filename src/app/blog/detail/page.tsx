@@ -32,9 +32,9 @@ export default async function DetailBlog({ searchParams }: Props) {
           alt={post?.title}
           width={1440}
           height={1440}
-          className="h-96 object-cover "
+          className="h-[28rem] object-cover rounded-2xl"
         />
-        <h1>{post?.title}</h1>
+        <h1 className="text-4xl py-4 font-semibold">{post?.title}</h1>
         <div
           dangerouslySetInnerHTML={{
             __html: post?.message,

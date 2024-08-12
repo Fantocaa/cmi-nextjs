@@ -1,5 +1,3 @@
-// "use client";
-
 import Hero from "@/components/home/hero";
 import Services from "@/components/home/services";
 import Whychooseus from "@/components/home/whychooseus";
@@ -8,6 +6,7 @@ import Cta from "@/components/home/cta";
 import Galery from "@/components/home/galery";
 import Image from "next/image";
 import type { Metadata } from "next";
+import Post from "@/components/home/post";
 
 export const metadata: Metadata = {
   title: "Home | PT. Cahaya Mercusuar Indonesia",
@@ -30,7 +29,8 @@ export default function Home() {
         <Services />
         {/* <Videocompor /> */}
         <Galery />
-        {/* <Cta /> */}
+        <Post />
+        <Cta />
       </>
     </section>
   );

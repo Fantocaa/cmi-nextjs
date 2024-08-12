@@ -1,86 +1,85 @@
+import { Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default function HeaderBlog() {
-  const blog = [
-    {
-      id: 1,
-      src: "/images/bg/marc-schulte-C1j96r-DArc-unsplash.jpg",
-      title: "Unlocking Business Efficiency with SaaS Solutions",
-      category: "Business",
-    },
-    {
-      id: 2,
-      src: "/images/bg/marc-schulte-C1j96r-DArc-unsplash.jpg",
-      title: "Revolutionizing industries through SaaS implementation",
-    },
-    {
-      id: 3,
-      src: "/images/bg/marc-schulte-C1j96r-DArc-unsplash.jpg",
-      title: "Synergizing SaaS and UX design for elevating digital experiences",
-    },
-    {
-      id: 4,
-      src: "/images/bg/marc-schulte-C1j96r-DArc-unsplash.jpg",
-      title: "Navigating SaaS waters with intuitive UI and UX",
-    },
-    {
-      id: 5,
-      src: "/images/bg/marc-schulte-C1j96r-DArc-unsplash.jpg",
-      title: "Sculpting SaaS success - the art of UI and UX design",
-    },
-    {
-      id: 6,
-      src: "/images/bg/marc-schulte-C1j96r-DArc-unsplash.jpg",
-      title: "Sculpting SaaS success - the art of UI and UX design",
-    },
-  ];
+interface DetailPostProps {
+  id: number;
+  title: string;
+  message: string;
+  image_name: string;
+  created_at: string;
+}
 
+interface Props {
+  post: DetailPostProps[];
+}
+
+export default function HeaderBlog({ post }: Props) {
   return (
     <>
-      <section className="pt-32 pb-16 bg-slate-50">
-        <div className="container">
-          <div className="grid grid-cols-8 gap-8 ">
+      <section className="pt-16 md:pt-32 pb-16">
+        <div className="container hidden md:block">
+          <div className="grid grid-cols-10 gap-8 ">
             {/* Main blog post */}
-            <div className="col-span-5 relative h-[23.7rem]">
+            <div className="col-span-10 md:col-span-7 relative h-[23.7rem] group">
               <Link href="/">
                 <div className="w-full h-full relative rounded-2xl overflow-hidden">
                   <Image
-                    src={blog[0].src}
-                    alt={blog[0].title}
+                    src={post[0].image_name}
+                    alt={post[0].title}
                     width={1080}
                     height={1080}
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full scale-100 transition duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-4 text-white">
-                    <span className="bg-white text-black px-2 py-1 rounded text-sm">
+                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 p-6 text-white">
+                    {/* <span className="bg-white text-black px-2 py-1 rounded text-sm">
                       {blog[0].category}
-                    </span>
-                    <h1 className="text-xl mt-2">{blog[0].title}</h1>
+                    </span> */}
+                    <h1 className="text-2xl mt-2 group-hover:underline line-clamp-2">
+                      {post[0].title}
+                    </h1>
+                    <div className="pt-4 flex gap-2 items-center">
+                      <Clock size={16} />
+                      <h1 className="text-sm">{post[0].created_at}</h1>
+                    </div>
                   </div>
                 </div>
               </Link>
             </div>
             {/* Other featured posts */}
-            <div className="col-span-3 text-darkcmi">
+            <div className="col-span-3 text-white hidden md:block">
               <h2 className="text-lg font-semibold mb-4">
                 Other featured posts
               </h2>
               <div className="flex flex-col gap-4">
-                {blog.slice(1).map((item) => (
-                  <Link href="/" key={item.id}>
-                    <div className="w-full flex items-center gap-4">
-                      <div className="flex-shrink-0">
+                {post.slice(1, 5).map((post) => (
+                  <Link
+                    href={{
+                      pathname: "/blog/detail",
+                      query: { id: post.id },
+                    }}
+                    key={post.id}
+                  >
+                    <div className="w-full flex items-center gap-4 group">
+                      <div className="flex-shrink-0 relative overflow-hidden rounded-lg">
                         <Image
-                          src={item.src}
-                          alt={item.title}
-                          width={80}
-                          height={80}
-                          className="rounded-lg object-cover"
+                          src={post.image_name}
+                          alt={post.title}
+                          width={256}
+                          height={256}
+                          className="rounded-lg object-cover h-full w-32 scale-100 transition duration-500 group-hover:scale-105"
                         />
                       </div>
-                      <h1 className="text-base line-clamp-2">{item.title}</h1>
+                      <div>
+                        <h1 className="text-base line-clamp-2 group-hover:underline">
+                          {post.title}
+                        </h1>
+                        <div className="pt-1 flex gap-2 items-center">
+                          <Clock size={12} />
+                          <h1 className="text-xs">{post.created_at}</h1>
+                        </div>
+                      </div>
                     </div>
                   </Link>
                 ))}

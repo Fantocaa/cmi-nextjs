@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { easeInOut, motion } from "framer-motion";
+// import { easeInOut, motion } from "framer-motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { AuroraBackground } from "@/components/ui/aurora-background";
@@ -24,7 +24,7 @@ export default function Hero() {
           plugins={[
             Autoplay({
               delay: 5000,
-              easeInOut,
+              // easeInOut,
               stopOnInteraction: false,
             }),
           ]}

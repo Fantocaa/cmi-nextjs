@@ -23,8 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { usePathname, useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 // import useProductStore from "@/components/store/useProductStore";
 import Filter from "./product-page/filter";
 import { BeatLoader } from "react-spinners";
@@ -255,7 +254,7 @@ export default function ProductPage({ products, categories }: Props) {
                   <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 w-full py-8">
                     {currentPosts.map((product, idx) => (
                       <div key={idx}>
-                        <div className="group relative block overflow-hidden rounded-xl bg-white">
+                        <div className="group relative overflow-hidden rounded-xl bg-white h-full flex flex-col">
                           <Link
                             href={{
                               pathname: "/products/detail",
@@ -271,17 +270,32 @@ export default function ProductPage({ products, categories }: Props) {
                                 width={500}
                                 height={500}
                               />
-                              <div className="relative bg-white p-4">
+                              <div className="relative bg-white p-4 flex-grow">
                                 <h3 className="text-lg 2xl:text-xl font-semibold text-darkcmi line-clamp-2">
                                   {product.nama}
                                 </h3>
                               </div>
                             </div>
                           </Link>
-                          <div className="w-full flex justify-center pb-6">
+                          <div className="w-full flex justify-center pb-6 mt-auto px-4 gap-4">
                             <Link
+                              href={{
+                                pathname: "/products/detail",
+                                query: { id: product?.id },
+                              }}
+                              key={product.id}
+                              className="w-full"
+                            >
+                              <Button
+                                variant="default"
+                                className="text-center w-full bg-darkcmi hover:bg-darkcmi hover:bg-opacity-90"
+                              >
+                                See Details
+                              </Button>
+                            </Link>
+                            {/* <Link
                               href="https://api.whatsapp.com/send?phone=628170500601"
-                              className=" w-full px-4"
+                              className="w-full"
                               target="__blank"
                             >
                               <Button
@@ -290,7 +304,7 @@ export default function ProductPage({ products, categories }: Props) {
                               >
                                 Contact Us
                               </Button>
-                            </Link>
+                            </Link> */}
                           </div>
                         </div>
                       </div>
@@ -373,7 +387,6 @@ function PaginationSection({
               setCurrentPage(i);
               router.push(`?page=${i}`);
             }}
-            className=""
           >
             {i}
           </PaginationLink>

@@ -43,7 +43,7 @@ export default function HomeLightbox({ image }: ProductProps) {
                 specific needs and provide customized solutions.
               </p>
               <Link href="/project">
-                <Button className="bg-opacity-100 py-2 px-8 text-center text-white cursor-pointer rounded-lg max-w-[200px]">
+                <Button className="py-2 px-8 max-w-[200px] button-services">
                   See All
                 </Button>
               </Link>

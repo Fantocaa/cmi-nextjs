@@ -1,10 +1,10 @@
 import React from "react";
-import HomeLightbox from "../product/product-page/lightbox/home-lightbox";
+import Projects from "@/components/project/project";
 
 async function getData(): Promise<ProductProps> {
   const res = await fetch(
-    // "http://cmi_backend_filament.test/api/admin/image-homes",
-    "https://backend.cahayamercusuar.com/api/admin/image-homes",
+    // "http://cmi_backend_filament.test/api/admin/projects",
+    "https://backend.cahayamercusuar.com/api/admin/projects",
     {
       cache: "no-store",
     }
@@ -27,18 +27,12 @@ type ProductProps = {
   image: Product[];
 };
 
-export default async function Galery() {
+export default async function ProjectMain() {
   const { image } = await getData();
-
   // console.log(image);
-
   return (
     <>
-      <div className="md:py-16 md:pt-24 pb-8">
-        <div className="container">
-          <HomeLightbox image={image} />
-        </div>
-      </div>
+      <Projects image={image} />
     </>
   );
 }

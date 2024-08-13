@@ -32,7 +32,7 @@ type ProductProps = {
 export default async function Galery() {
   const { image } = await getData();
 
-  console.log(image);
+  // console.log(image);
 
   return (
     <>

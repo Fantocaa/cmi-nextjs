@@ -1,7 +1,7 @@
 async function getData() {
   const res = await fetch(
-    "http://cmi_backend_filament.test/post",
-    // "https://backend.cahayamercusuar.com/api/admin/products",
+    // "http://cmi_backend_filament.test/post",
+    "https://backend.cahayamercusuar.com/post",
     {
       cache: "no-store",
     }

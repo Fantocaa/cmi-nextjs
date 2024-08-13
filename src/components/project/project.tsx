@@ -28,23 +28,25 @@ export default function Project({ image }: ProductProps) {
 
   return (
     <>
-      {image.slice(0, 6).map((product, idx) => (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4" key={idx}>
-          {product.image_name.map((imgSrc, imgIdx) => (
-            <div
-              className="group relative block overflow-hidden rounded-xl border border-darkcmi border-opacity-10 shadow-lg cursor-pointer"
-              key={imgIdx}
-            >
-              <Image
-                src={imgSrc}
-                alt={`image-${imgIdx}`}
-                className="h-96 w-full object-cover transition duration-500 group-hover:scale-105 bg-white text-white"
-                width={500}
-                height={500}
-                onClick={() => setIndex2(imgIdx)}
-              />
-            </div>
-          ))}
+      {image.map((product, idx) => (
+        <div key={idx}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            {product.image_name.map((imgSrc, imgIdx) => (
+              <div
+                className="group relative block overflow-hidden rounded-xl border border-darkcmi border-opacity-10 shadow-lg cursor-pointer"
+                key={imgIdx}
+              >
+                <Image
+                  src={imgSrc}
+                  alt={`image-${imgIdx}`}
+                  className="h-96 w-full object-cover transition duration-500 group-hover:scale-105 bg-white text-white"
+                  width={500}
+                  height={500}
+                  onClick={() => setIndex2(imgIdx)}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       ))}
       <Lightbox

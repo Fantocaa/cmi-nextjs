@@ -29,10 +29,12 @@ type ProductProps = {
 
 export default async function ProjectMain() {
   const { image } = await getData();
-  // console.log(image);
+  //   console.log(image);
   return (
     <>
-      <Projects image={image} />
+      <div className="container">
+        <Projects image={image} />
+      </div>
     </>
   );
 }

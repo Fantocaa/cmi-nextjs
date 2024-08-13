@@ -20,6 +20,8 @@ async function getData() {
 
 export default async function Post() {
   const post = await getData();
+  // console.log(post);
+
   return (
     <section className="container py-16">
       <div className="bg-darkcmi rounded-2xl p-8">

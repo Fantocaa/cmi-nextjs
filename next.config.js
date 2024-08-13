@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/login",
-        destination: "http://127.0.0.1:8000/",
-        permanent: false,
-        basePath: false,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: "/login",
+  //       destination: "http://127.0.0.1:8000/",
+  //       permanent: false,
+  //       basePath: false,
+  //     },
+  //   ];
+  // },
   images: {
     remotePatterns: [
       {
@@ -41,6 +41,10 @@ const nextConfig = {
       {
         protocol: "http",
         hostname: "cmi_backend_filament.test",
+      },
+      {
+        protocol: "https",
+        hostname: "backend.cahayamercusuar.com",
       },
     ],
   },

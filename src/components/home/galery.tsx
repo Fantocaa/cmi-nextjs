@@ -32,6 +32,8 @@ type ProductProps = {
 export default async function Galery() {
   const { image } = await getData();
 
+  console.log(image);
+
   return (
     <>
       <div className="md:py-16 md:pt-24 pb-8">

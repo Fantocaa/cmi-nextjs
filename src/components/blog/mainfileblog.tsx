@@ -88,7 +88,7 @@ export default function MainFileBlog({ post }: Props) {
                         alt={post.title}
                         width={800}
                         height={800}
-                        className="w-full h-72 scale-100 transition duration-500 group-hover:scale-105"
+                        className="w-full h-72 scale-100 transition duration-500 group-hover:scale-105 object-cover"
                       />
                     </div>
                     <div className="p-6 bg-white">
@@ -176,23 +176,6 @@ function PaginationSection({
     <div className="cursor-pointer mt-16 text-white">
       <Pagination>
         <PaginationContent>
-          {/* <PaginationItem>
-            <PaginationPrevious
-              onClick={(e) => {
-                e.preventDefault();
-                if (!isPrevDisabled) {
-                  setCurrentPage(currentPage - 1);
-                }
-              }}
-              isActive={currentPage === 1}
-              aria-disabled={isPrevDisabled}
-              className={
-                isPrevDisabled
-                  ? "pointer-events-none opacity-50 bg-darkcmi"
-                  : undefined
-              }
-            />
-          </PaginationItem> */}
           <PaginationItem>
             <PaginationPrevious
               onClick={(e) => {

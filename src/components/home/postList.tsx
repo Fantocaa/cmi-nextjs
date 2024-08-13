@@ -37,7 +37,7 @@ export default function PostList({ post }: Props) {
                   alt={post.title}
                   width={800}
                   height={800}
-                  className="w-full h-48 rounded-2xl scale-100 transition duration-500 group-hover:scale-105"
+                  className="w-full h-48 rounded-2xl scale-100 transition duration-500 group-hover:scale-105 object-cover"
                 />
               </div>
               <div className="pt-6 text-white">

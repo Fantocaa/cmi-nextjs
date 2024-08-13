@@ -16,10 +16,13 @@ interface Props {
 }
 
 export default function PostList({ post }: Props) {
+  // Urutkan post berdasarkan created_at dari terbaru ke terlama
+  const sortedPosts = post.sort((a, b) => b.id - a.id);
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        {post.slice(0, 4).map((post) => (
+        {sortedPosts.slice(0, 4).map((post) => (
           <Link
             key={post.id}
             href={{

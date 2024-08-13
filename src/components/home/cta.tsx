@@ -8,16 +8,16 @@ const Cta = () => {
   return (
     <div className="container">
       <div className="mt-8 relative">
-        <div className="absolute top-32 md:top-48 xl:top-56 pl-4 md:pl-0 md:right-6 lg:right-36 text-darkcmi">
+        <div className="absolute top-32 md:top-48 xl:top-56 pl-6 md:pl-0 md:right-6 lg:right-36 text-darkcmi">
           <h1 className="text-4xl md:text-5xl font-semibold max-w-sm">
             It&apos;s easy to get{" "}
             <span className="text-7xl md:text-8xl font-bold">Started</span>
           </h1>
-          <p className="text-xl md:text-2xl py-4">
+          <p className="text-xl md:text-2xl py-4 font-semibold">
             We can talk anymore about this
           </p>
           <Link href="/contact">
-            <Button className="p-6 text-lg">Contact Us</Button>
+            <Button className="p-6 text-lg bg-darkcmi">Contact Us</Button>
           </Link>
         </div>
       </div>

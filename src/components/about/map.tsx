@@ -10,7 +10,7 @@ export default function Map() {
           alt="map"
           width={1080}
           height={1080}
-          className="mx-auto pb-4 max-w-screen-md"
+          className="mx-auto pb-4 w-full md:max-w-screen-md"
         />
       </div>
       <Image

@@ -10,18 +10,18 @@ export default function AllProduct() {
           alt="product"
           width={2560}
           height={2560}
-          className="max-w-4xl mx-auto"
+          className="w-full max-w-4xl mx-auto pt-8 md:pt-0"
         />
-        <div className="grid grid-cols-3 mx-auto justify-center text-center">
-          <div className="flex gap-4 items-center justify-center">
+        <div className="md:grid grid-cols-3 mx-auto justify-center text-center pt-8 md:pt-0">
+          <div className="flex gap-4 items-center md:justify-center pt-4 md:pt-0">
             <Cog color="white" size={40} />
             <p className="text-lg">Full Customizable</p>
           </div>
-          <div className="flex gap-4 items-center justify-center">
+          <div className="flex gap-4 items-center md:justify-center pt-4 md:pt-0">
             <Banknote color="white" size={40} />
             <h1 className="text-lg">Best Price</h1>
           </div>
-          <div className="flex gap-4 items-center justify-center">
+          <div className="flex gap-4 items-center md:justify-center pt-4 md:pt-0">
             <Cpu stroke="white" size={40} />
             <h1 className="text-lg">High Technology</h1>
           </div>

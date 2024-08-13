@@ -18,12 +18,12 @@ async function getData() {
 }
 
 export default async function Post() {
-  const post = await getData(); // Mengambil data post
+  const post = await getData();
   return (
     <section className="container py-16">
       <div className="bg-darkcmi rounded-2xl p-8">
-        <div className="flex justify-between">
-          <h1 className="text-white text-4xl pb-8 font-semibold">
+        <div className="flex justify-between items-center pb-8">
+          <h1 className="text-white text-xl md:text-4xl md:pb-8 font-semibold">
             Latest Post
           </h1>
           <Link href="/blog">

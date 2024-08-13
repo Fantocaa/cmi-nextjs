@@ -10,7 +10,7 @@ export default function Worth() {
       <div className="container text-darkcmi py-16">
         <div className="md:flex gap-8">
           <div className="w-full md:w-1/2">
-            <h1 className="text-5xl leading-tight font-bold max-w-[500px]">
+            <h1 className="text-3xl md:text-5xl md:leading-tight font-bold max-w-[500px]">
               Become a Company that is trustworthy and reliable in answering the
               needs of stage lighting and LED Display
             </h1>

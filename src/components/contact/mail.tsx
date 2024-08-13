@@ -31,7 +31,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
     <>
       <>
         <main
-          className="flex min-h-screen flex-col items-center justify-center p-24 gap-4"
+          className="flex min-h-screen flex-col items-center justify-center p-4 md:p-24 gap-4"
           ref={ref}
         >
           <section>

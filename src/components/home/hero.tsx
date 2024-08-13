@@ -35,7 +35,7 @@ export default function Hero() {
               <Image
                 alt="hero"
                 src="/images/bg/20230630_173854.jpg"
-                className="w-full h-screen object-cover"
+                className="w-full h-[80dvh] md:h-screen object-cover"
                 width={1080}
                 height={1080}
               />
@@ -44,7 +44,7 @@ export default function Hero() {
               <Image
                 alt="hero"
                 src="/images/bg/IMG_5253.jpg"
-                className="w-full h-screen object-cover"
+                className="w-full h-[80dvh] md:h-screen object-cover"
                 width={1080}
                 height={1080}
               />
@@ -53,7 +53,7 @@ export default function Hero() {
               <Image
                 alt="hero"
                 src="/images/bg/IMG-20231017-WA0015.jpg"
-                className="w-full h-screen object-cover"
+                className="w-full h-[80dvh] md:h-screen object-cover"
                 width={1080}
                 height={1080}
               />
@@ -61,7 +61,7 @@ export default function Hero() {
           </CarouselContent>
         </Carousel>
 
-        <div className="h-screen w-full flex justify-center items-center z-50 bg-darkcmi bg-opacity-80 pt-16 2xl:pt-0">
+        <div className="h-[80dvh] md:h-screen w-full flex justify-center items-center z-50 bg-darkcmi bg-opacity-80 pt-16 2xl:pt-0">
           <div className="h-full w-full flex flex-col gap-4 justify-center m-auto items-center text-center px-4 sm:px-0">
             <div
               //   variants={slideInFromTop}

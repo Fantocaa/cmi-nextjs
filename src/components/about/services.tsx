@@ -24,7 +24,7 @@ export default function Services() {
             className="absolute -z-10"
           />
 
-          <div className="md:flex gap-8 items-center pt-40">
+          <div className="md:flex gap-8 items-center pt-24 md:pt-40">
             <div className="w-full md:w-1/2">
               <h1 className="text-4xl font-semibold mb-4">Design</h1>
               <p className="max-w-lg text-lg">
@@ -45,7 +45,7 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="md:flex flex-row-reverse gap-8 items-center pt-16">
+          <div className="md:flex flex-row-reverse gap-8 items-center pt-24 md:pt-16">
             <div className="w-full md:w-1/2">
               <h1 className="text-4xl font-semibold mb-4">
                 Installation Testing & Commisioning
@@ -69,7 +69,7 @@ export default function Services() {
             </div>
           </div>
 
-          <div className="md:flex gap-8 items-center pt-16">
+          <div className="md:flex gap-8 items-center pt-24 md:pt-16">
             <div className="w-full md:w-1/2">
               <h1 className="text-4xl font-semibold mb-4">
                 After Sales Service

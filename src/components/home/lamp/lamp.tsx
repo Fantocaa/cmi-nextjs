@@ -9,20 +9,6 @@ import ProductHome from "./product-home";
 import AllProduct from "./all-product";
 import { Banknote, Cog, Cpu } from "lucide-react";
 
-// interface DetailProductProps {
-//   id: number;
-//   nama: string;
-//   deskripsi: string;
-//   spesifikasi: string;
-//   image: string[];
-//   category_id: number;
-//   category_name: string;
-// }
-
-// interface Props {
-//   product: DetailProductProps[];
-// }
-
 export function LampDemo() {
   // { product }: Props
   return (
@@ -140,7 +126,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex lg:min-h-screen flex-col items-center justify-center overflow-hidden w-full rounded-md z-0 pt-72 xl:pt-[23rem] 2xl:pt-[25rem]",
+        "relative flex lg:min-h-screen flex-col items-center justify-center overflow-hidden w-full rounded-md z-0 pt-[24rem] xl:pt-[23rem] 2xl:pt-[25rem]",
         className
       )}
     >

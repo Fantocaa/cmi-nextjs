@@ -28,24 +28,24 @@ const Footer = () => {
               </h2>
             </div>
             <div className="md:w-1/2 flex flex-col lg:items-end items-start pt-8 md:pt-0">
-              <div>
+              <div className="md:pl-56">
                 <h1 className="pb-4 text-xl text-left">Contact Us</h1>
                 <ul className="text-slate-300">
-                  <li className="flex items-center gap-4 mb-4">
-                    <Phone />
-                    <h1 className="2xl:text-lg font-medium ">
+                  <li className="flex items-start gap-4 mb-4">
+                    <Phone className="flex-shrink-0" />
+                    <h1 className="font-medium break-words">
                       +62 81 705 006 01
                     </h1>
                   </li>
-                  <li className="flex items-center gap-4 mb-4">
-                    <Mail />
-                    <h1 className="2xl:text-lg font-medium ">
+                  <li className="flex items-start gap-4 mb-4">
+                    <Mail className="flex-shrink-0" />
+                    <h1 className="font-medium break-words">
                       info@cahayamercusuar.com
                     </h1>
                   </li>
-                  <li className="flex items-center gap-4">
-                    <MapPin />
-                    <h1 className="2xl:text-lg font-medium md:max-w-md 2xl:max-w-md w-full md:w-64 lg:w-full">
+                  <li className="flex items-start gap-4">
+                    <MapPin className="flex-shrink-0" />
+                    <h1 className="font-medium w-full md:max-w-md 2xl:max-w-md md:w-64 lg:w-full break-words">
                       Jl. Dharmahusada Indah Blok I Nomor Ruko 16 E, RT.01,
                       RW.09, Kec. Mulyorejo, Kel. Mulyorejo Surabaya Kode pos :
                       60115

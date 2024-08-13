@@ -66,6 +66,7 @@ export function MainNav() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const [prevPathname, setPrevPathname] = useState(""); // State untuk memantau path sebelumnya
   const controls = useAnimation();
 
   useEffect(() => {
@@ -109,12 +110,25 @@ export function MainNav() {
   const pathname = usePathname();
   const isActive = (path: string) => path === pathname;
   const [showDropdown, setShowDropdown] = useState(false);
-  // const toggleDropdown = () => {
-  //   setShowDropdown(!showDropdown);
-  // };
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  // const toggleDropdown = () => {
+  //   setShowDropdown(!showDropdown);
+  // };
+
+  useEffect(() => {
+    if (pathname !== prevPathname) {
+      // Tutup sidebar hanya jika path berubah
+      if (isOpen) {
+        setIsOpen(false);
+      }
+      // Perbarui prevPathname untuk memantau perubahan berikutnya
+      setPrevPathname(pathname);
+    }
+  }, [pathname, prevPathname, isOpen]);
 
   return (
     <>

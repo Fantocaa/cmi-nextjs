@@ -21,7 +21,9 @@ import { Menu } from "lucide-react";
 import { User } from "lucide-react";
 import { ClipboardList } from "lucide-react";
 import { BookOpenText } from "lucide-react";
-import { Truck } from "lucide-react";
+import { Headset } from "lucide-react";
+import { Theater } from "lucide-react";
+import { BookText } from "lucide-react";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
 import { buttonVariants } from "@/components/ui/button";
 
@@ -258,7 +260,7 @@ export function MainNav() {
                   </svg>
                 </button>
               </div>
-              <nav className="flex flex-col p-4">
+              <nav className="flex flex-col gap-4 p-4">
                 <Link
                   href="/"
                   className="flex gap-4 items-center p-2 text-white hover:bg-greenaml-500 rounded"
@@ -274,18 +276,32 @@ export function MainNav() {
                   About
                 </Link>
                 <Link
-                  href="/project"
-                  className="flex gap-4 items-center p-2 text-white hover:bg-greenaml-500 rounded"
-                >
-                  <ClipboardList />
-                  Project
-                </Link>
-                <Link
                   href="/products"
                   className="flex gap-4 items-center p-2 text-white hover:bg-greenaml-500 rounded"
                 >
                   <ClipboardList />
                   Products
+                </Link>
+                <Link
+                  href="/project"
+                  className="flex gap-4 items-center p-2 text-white hover:bg-greenaml-500 rounded"
+                >
+                  <Theater />
+                  Project
+                </Link>
+                <Link
+                  href="/blog"
+                  className="flex gap-4 items-center p-2 text-white hover:bg-greenaml-500 rounded"
+                >
+                  <BookText />
+                  Blog
+                </Link>
+                <Link
+                  href="/contact"
+                  className="flex gap-4 items-center p-2 text-white hover:bg-greenaml-500 rounded"
+                >
+                  <Headset />
+                  Contact
                 </Link>
                 <Link
                   href="https://karier.tako.co.id/"

@@ -5,8 +5,8 @@ import HomeLightbox from "../product/product-page/lightbox/home-lightbox";
 
 async function getData(): Promise<ProductProps> {
   const res = await fetch(
-    "http://cmi_backend_filament.test/api/admin/image-homes",
-    // "https://backend.cahayamercusuar.com/api/admin/image-homes"
+    // "http://cmi_backend_filament.test/api/admin/image-homes",
+    "https://backend.cahayamercusuar.com/api/admin/image-homes",
     {
       cache: "no-store",
     }

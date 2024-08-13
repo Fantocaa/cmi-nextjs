@@ -9,8 +9,8 @@ export const metadata = {
 
 async function getData() {
   const res = await fetch(
-    "http://cmi_backend_filament.test/api/admin/products",
-    // "https://backend.cahayamercusuar.com/api/admin/products",
+    // "http://cmi_backend_filament.test/api/admin/products",
+    "https://backend.cahayamercusuar.com/api/admin/products",
     {
       cache: "no-store",
     }

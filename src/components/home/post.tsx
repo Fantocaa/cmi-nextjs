@@ -6,7 +6,8 @@ import PostList from "./postList";
 import { Button } from "../ui/button";
 
 async function getData() {
-  const res = await fetch("http://cmi_backend_filament.test/post", {
+  // const res = await fetch("http://cmi_backend_filament.test/post", {
+  const res = await fetch("https://backend.cahayamercusuar.com/post", {
     cache: "no-store",
   });
   if (!res.ok) {

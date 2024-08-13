@@ -37,8 +37,9 @@ export function LampDemo() {
           professional and impressive solutions.
         </p>
         <Link
-          href="https://drive.tako.co.id/d/s/yl5SVM0c1iGcO1gI4oMvZo23KDkLtzaO/oE7q9J05mcFHvyzZacRMy9mSwtXB_SBM-Urfg5aCYags"
-          target="__blank"
+          // href="https://drive.tako.co.id/d/s/yl5SVM0c1iGcO1gI4oMvZo23KDkLtzaO/oE7q9J05mcFHvyzZacRMy9mSwtXB_SBM-Urfg5aCYags"
+          href="/products"
+          // target="__blank"
         >
           <Button
             variant="default"

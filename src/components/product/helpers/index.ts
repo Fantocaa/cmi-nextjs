@@ -14,14 +14,17 @@ async function getData() {
   return data.data; // Extract the data property
 }
 
-export const getDetailProductsPage = async (id: number) => {
+// export const getDetailProductsPage = async (id: number) => {
+export const getDetailProductsPage = async (hashedId: string) => {
   const products = await getData();
 
   // console.log(products);
 
   const singleItem = products.find((product: any) => {
     // console.log(product.id); // Log each ID to check
-    return product.id === id;
+    // return product.id === id;
+
+    return product.id === hashedId;
   });
 
   return singleItem;

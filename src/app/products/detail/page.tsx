@@ -20,7 +20,7 @@ type Props = {
 
 export const generateMetadata = async ({ searchParams }: Props) => {
   const idString = searchParams?.id;
-  const id = Number(idString);
+  const id = String(idString);
 
   const product = await getDetailProductsPage(id);
 
@@ -35,7 +35,7 @@ export default async function DetailProductPage({ searchParams }: Props) {
   // console.log(searchParams.id);
 
   const idString = searchParams?.id;
-  const id = Number(idString);
+  const id = String(idString);
   // console.log(typeof id);
 
   const product = await getDetailProductsPage(id);
